@@ -3,9 +3,7 @@ require_relative 'scenario_runner'
 require_relative 'log'
 require_relative 'log_format/pretty'
 require_relative 'activity'
-require_relative 'activities/create_file'
-require_relative 'activities/modify_file'
-require_relative 'activities/delete_file'
+Dir['./activities/*.rb'].each { |file| require file }
 
 SCENARIO_PATH = './scenarios/default.rb'
 
