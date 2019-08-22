@@ -1,3 +1,5 @@
+require 'date'
+
 class ScenarioRunner
   def initialize(log: nil)
     @log = log
@@ -7,7 +9,10 @@ class ScenarioRunner
     scenario.each do |activity|
       activity.perform
       if @log
-        event = {activity: activity.activity_name}.merge!(activity.log_data)
+        event = {
+          activity: activity.activity_name,
+          timestamp: DateTime.now.iso8601,
+        }.merge!(activity.log_data)
         @log.append(event)
       end
     end

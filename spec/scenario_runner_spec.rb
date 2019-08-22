@@ -31,8 +31,8 @@ describe ScenarioRunner do
       scenario_runner = ScenarioRunner.new(log: logger)
       scenario_runner.run(scenario)
       expect(logged_events).to contain_exactly(
-        a_hash_including(activity: 'test_activity'),
-        a_hash_including(activity: 'test_activity')
+        a_hash_including(activity: 'test_activity', timestamp: be_a(String)),
+        a_hash_including(activity: 'test_activity', timestamp: be_a(String))
       )
     end
 
