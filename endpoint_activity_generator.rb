@@ -5,6 +5,7 @@ require_relative 'log_format/pretty'
 require_relative 'activity'
 require_relative 'activities/create_file'
 require_relative 'activities/modify_file'
+require_relative 'activities/delete_file'
 
 SCENARIO_PATH = './scenarios/default.rb'
 
