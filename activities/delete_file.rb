@@ -8,4 +8,8 @@ class DeleteFile < Activity
   def perform
     File.delete(@path)
   end
+
+  def log_data
+    {path: @path}
+  end
 end

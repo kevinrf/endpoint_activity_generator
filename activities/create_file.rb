@@ -8,4 +8,8 @@ class CreateFile < Activity
   def perform
     File.open(@path, 'w') {}
   end
+
+  def log_data
+    {path: @path}
+  end
 end

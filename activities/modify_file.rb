@@ -11,4 +11,8 @@ class ModifyFile < Activity
 
     FileUtils.touch(@path)
   end
+
+  def log_data
+    {path: @path}
+  end
 end

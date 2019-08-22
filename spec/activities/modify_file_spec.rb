@@ -27,6 +27,13 @@ describe ModifyFile do
     end
   end
 
+  describe '#log_data' do
+    it 'includes the target path' do
+      file_path = './tempfile.txt'
+      expect(ModifyFile.new(file_path).log_data).to include(path: file_path)
+    end
+  end
+
   it 'extends Activity' do
     expect(ModifyFile).to be < Activity
   end
