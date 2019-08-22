@@ -1,18 +1,19 @@
 require_relative '../scenario_runner'
+require_relative '../activity'
 require_relative '../log'
 require_relative '../log_format/raw'
 
 describe ScenarioRunner do
   describe '#run' do
     let(:test_activity_class) do
-      Class.new do
+      Class.new(Activity) do
         def perform; end
 
         def log_data
           {}
         end
 
-        def activity_name
+        def self.activity_name
           'test_activity'
         end
       end

@@ -11,7 +11,7 @@ class ScenarioRunner
       next unless @log
 
       event = {
-        activity: activity.activity_name,
+        activity: activity.class.activity_name,
         timestamp: DateTime.now.iso8601,
       }.merge!(activity.log_data)
       @log.append(event)

@@ -25,10 +25,7 @@ describe ScenarioBuilder do
   end
 end
 
-class TestActivity
-  extend Activity
-
+class TestActivity < Activity
   def initialize(foo, bar:); end
-
   def perform; end
 end

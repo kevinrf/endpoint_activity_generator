@@ -14,6 +14,6 @@ describe CreateFile do
   end
 
   it 'extends Activity' do
-    expect(CreateFile).to be_an(Activity)
+    expect(CreateFile).to be < Activity
   end
 end

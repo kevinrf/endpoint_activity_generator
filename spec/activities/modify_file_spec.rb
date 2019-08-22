@@ -28,6 +28,6 @@ describe ModifyFile do
   end
 
   it 'extends Activity' do
-    expect(ModifyFile).to be_an(Activity)
+    expect(ModifyFile).to be < Activity
   end
 end

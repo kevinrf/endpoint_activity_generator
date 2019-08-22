@@ -8,6 +8,4 @@ describe Activity do
   end
 end
 
-class TestActivity
-  extend Activity
-end
+class TestActivity < Activity; end
