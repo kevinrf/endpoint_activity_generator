@@ -48,7 +48,6 @@ describe ScenarioRunner do
       expect(logged_events).to contain_exactly(
         a_hash_including(activity: 'test_activity', additional_data: 'foobar')
       )
-
     end
   end
 end

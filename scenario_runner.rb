@@ -8,13 +8,13 @@ class ScenarioRunner
   def run(scenario)
     scenario.each do |activity|
       activity.perform
-      if @log
-        event = {
-          activity: activity.activity_name,
-          timestamp: DateTime.now.iso8601,
-        }.merge!(activity.log_data)
-        @log.append(event)
-      end
+      next unless @log
+
+      event = {
+        activity: activity.activity_name,
+        timestamp: DateTime.now.iso8601,
+      }.merge!(activity.log_data)
+      @log.append(event)
     end
   end
 end
