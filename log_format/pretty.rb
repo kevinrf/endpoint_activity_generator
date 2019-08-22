@@ -6,6 +6,6 @@ module Pretty
     end
     value_string = values.each_pair.collect { |k, v| "#{k}=#{v}" }.join(', ')
 
-    "#{event[:timestamp]} #{event[:activity]} (#{value_string})"
+    "#{event[:timestamp]} #{event[:activity]} (#{value_string})\n"
   end
 end

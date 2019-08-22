@@ -9,7 +9,7 @@ describe Pretty do
         bar: 1,
         baz: 2
       }
-      expect(Pretty.format(event)).to eql '2019-08-21T21:06 foo (bar=1, baz=2)'
+      expect(Pretty.format(event)).to eql "2019-08-21T21:06 foo (bar=1, baz=2)\n"
     end
   end
 end
