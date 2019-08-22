@@ -27,7 +27,7 @@ describe ScenarioRunner do
 
     it 'logs all activities performed' do
       logged_events = []
-      logger = Log.new(out: logged_events, formatter: Raw)
+      logger = Log.new(out: logged_events, formatter: LogFormat::Raw)
       scenario = [test_activity_class.new, test_activity_class.new]
       scenario_runner = ScenarioRunner.new(log: logger)
       scenario_runner.run(scenario)
@@ -42,7 +42,7 @@ describe ScenarioRunner do
         {additional_data: 'foobar'}
       end
       logged_events = []
-      logger = Log.new(out: logged_events, formatter: Raw)
+      logger = Log.new(out: logged_events, formatter: LogFormat::Raw)
       scenario = [test_activity_class.new]
       scenario_runner = ScenarioRunner.new(log: logger)
       scenario_runner.run(scenario)
