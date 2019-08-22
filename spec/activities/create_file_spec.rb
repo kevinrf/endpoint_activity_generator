@@ -12,4 +12,8 @@ describe CreateFile do
       expect(File.exist?(file_path)).to be true
     end
   end
+
+  it 'extends Activity' do
+    expect(CreateFile).to be_an(Activity)
+  end
 end

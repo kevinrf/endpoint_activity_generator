@@ -1,6 +1,9 @@
 require 'fileutils'
+require_relative '../activity'
 
 class ModifyFile
+  extend Activity
+
   def initialize(path)
     @path = path
   end

@@ -26,4 +26,8 @@ describe ModifyFile do
       end
     end
   end
+
+  it 'extends Activity' do
+    expect(ModifyFile).to be_an(Activity)
+  end
 end
