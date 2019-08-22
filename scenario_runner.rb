@@ -6,7 +6,10 @@ class ScenarioRunner
   def run(scenario)
     scenario.each do |activity|
       activity.perform
-      @log.append({activity: activity.activity_name}) if @log
+      if @log
+        event = {activity: activity.activity_name}.merge!(activity.log_data)
+        @log.append(event)
+      end
     end
   end
 end

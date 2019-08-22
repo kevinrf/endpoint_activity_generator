@@ -8,6 +8,10 @@ describe ScenarioRunner do
       Class.new do
         def perform; end
 
+        def log_data
+          {}
+        end
+
         def activity_name
           'test_activity'
         end
@@ -30,6 +34,21 @@ describe ScenarioRunner do
         a_hash_including(activity: 'test_activity'),
         a_hash_including(activity: 'test_activity')
       )
+    end
+
+    it 'includes any data from Activity#log_data in the log statements' do
+      test_activity_class.define_method(:log_data) do
+        {additional_data: 'foobar'}
+      end
+      logged_events = []
+      logger = Log.new(out: logged_events, formatter: Raw)
+      scenario = [test_activity_class.new]
+      scenario_runner = ScenarioRunner.new(log: logger)
+      scenario_runner.run(scenario)
+      expect(logged_events).to contain_exactly(
+        a_hash_including(activity: 'test_activity', additional_data: 'foobar')
+      )
+
     end
   end
 end
