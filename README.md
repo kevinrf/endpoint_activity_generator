@@ -37,6 +37,7 @@ Usage: eag [options]
     -o, --output OUTPUT              Log file destination. If not present, logs are printed to STDOUT.
 ```
 
+### Scenario files
 You must specify a scenario file to run. A scenario file is a Ruby file that
 defines the activities that will be performed (e.g. creating/updating files on
 the file system) with very lightweight domain-specific language. For example:
@@ -48,9 +49,13 @@ transmit_data 'example.com', 80, data: "GET / HTTP/1.1\nHost: example.com\n\n"
 run_process 'echo', 'hello world'
 run_process 'cal'
 ```
+Supported activities for use in scenarios are defined in `lib/activities`.
 
-Supported log formats are `pretty` (default), `json`, and `raw`.
+### Logging
+Supported log formats are defined in `lib/log_format` and include `pretty`
+(default), `json`, and `raw`.
 
+### Example
 To run the example scenario and output the logs as newline-separated JSON:
 ```
 $ eag -f scenarios/example.rb --log-format json
