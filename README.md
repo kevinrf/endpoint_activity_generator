@@ -17,15 +17,18 @@ $ gem install endpoint_activity_generator
 ```
 
 ## Run
-As an installed gem:
-
+### As an installed gem
 ```bash
 $ eag --help
 ```
 
-Or directly from the repository:
+### Directly from the repository:
 ```bash
-$ ./bin/eag --help
+$ ./bin/eag
+```
+On Windows the shebang line is not supported, so execute ruby explicitly:
+```
+> ruby .\bin\eag
 ```
 
 ## Use
