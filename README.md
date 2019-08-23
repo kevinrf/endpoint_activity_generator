@@ -22,7 +22,7 @@ $ gem install endpoint_activity_generator
 $ eag --help
 ```
 
-### Directly from the repository:
+### Directly from the repository
 ```bash
 $ ./bin/eag
 ```
