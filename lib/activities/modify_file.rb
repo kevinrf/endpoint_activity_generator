@@ -1,15 +1,17 @@
-require 'fileutils'
 require_relative '../activity'
 
 class ModifyFile < Activity
-  def initialize(path)
+  def initialize(path, append_data: nil)
     @path = path
+    @append_data = append_data
   end
 
   def perform
     raise "File does not yet exist: #{@path}" unless File.exist?(@path)
 
-    FileUtils.touch(@path)
+    File.open(@path, 'a') do |f|
+      f.write(@append_data)
+    end
   end
 
   def log_data

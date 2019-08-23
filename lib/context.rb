@@ -1,3 +1,5 @@
+require 'etc'
+
 module Context
   def self.resolve
     {
