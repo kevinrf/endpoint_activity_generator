@@ -1,10 +1,12 @@
+#!/usr/bin/env ruby
+
 require 'optparse'
-require_relative 'activity'
-require_relative 'context'
-require_relative 'log'
-require_relative 'log_format'
-require_relative 'scenario_builder'
-require_relative 'scenario_runner'
+require_relative '../lib/activity'
+require_relative '../lib/context'
+require_relative '../lib/log'
+require_relative '../lib/log_format'
+require_relative '../lib/scenario_builder'
+require_relative '../lib/scenario_runner'
 
 context = Context.resolve
 
