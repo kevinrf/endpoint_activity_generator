@@ -1,7 +1,7 @@
-require_relative '../scenario_runner'
-require_relative '../activity'
-require_relative '../log'
-require_relative '../log_format/raw'
+require_relative '../lib/scenario_runner'
+require_relative '../lib/activity'
+require_relative '../lib/log'
+require_relative '../lib/log_format/raw'
 
 describe ScenarioRunner do
   describe '#run' do

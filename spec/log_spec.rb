@@ -1,4 +1,4 @@
-require_relative '../log'
+require_relative '../lib/log'
 
 describe Log do
   describe '#append' do

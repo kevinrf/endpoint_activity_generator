@@ -1,6 +1,6 @@
 require 'pp'
 require 'fakefs/spec_helpers'
-require_relative '../../activities/delete_file'
+require_relative '../../lib/activities/delete_file'
 
 describe DeleteFile do
   include FakeFS::SpecHelpers

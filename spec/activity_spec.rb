@@ -1,4 +1,4 @@
-require_relative '../activity'
+require_relative '../lib/activity'
 
 describe Activity do
   describe '#activity_name' do

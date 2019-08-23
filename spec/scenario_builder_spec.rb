@@ -1,5 +1,5 @@
-require_relative '../scenario_builder'
-require_relative '../activity'
+require_relative '../lib/scenario_builder'
+require_relative '../lib/activity'
 
 describe ScenarioBuilder do
   describe '.register_activity_class' do

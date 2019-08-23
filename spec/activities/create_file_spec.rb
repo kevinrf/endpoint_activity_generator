@@ -1,6 +1,6 @@
 require 'pp'
 require 'fakefs/spec_helpers'
-require_relative '../../activities/create_file'
+require_relative '../../lib/activities/create_file'
 
 describe CreateFile do
   include FakeFS::SpecHelpers

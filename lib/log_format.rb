@@ -1,4 +1,4 @@
-Dir['./log_format/*.rb'].each { |file| require file }
+Dir['./lib/log_format/*.rb'].each { |file| require file }
 
 module LogFormat
   def self.for_name(format_name)

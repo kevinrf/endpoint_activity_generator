@@ -1,4 +1,4 @@
-require_relative '../log_format'
+require_relative '../lib/log_format'
 
 describe LogFormat do
   describe '.for_name' do

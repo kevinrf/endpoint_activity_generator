@@ -1,4 +1,4 @@
-require_relative '../../log_format/pretty'
+require_relative '../../lib/log_format/pretty'
 
 describe LogFormat::Pretty do
   describe '.format' do

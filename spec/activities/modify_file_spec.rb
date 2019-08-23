@@ -1,6 +1,6 @@
 require 'pp'
 require 'fakefs/spec_helpers'
-require_relative '../../activities/modify_file'
+require_relative '../../lib/activities/modify_file'
 
 describe ModifyFile do
   include FakeFS::SpecHelpers
