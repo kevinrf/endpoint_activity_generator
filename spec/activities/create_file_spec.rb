@@ -14,9 +14,11 @@ describe CreateFile do
   end
 
   describe '#log_data' do
-    it 'includes the target path' do
+    it 'includes the target absolute path' do
       file_path = './tempfile.txt'
-      expect(CreateFile.new(file_path).log_data).to include(path: file_path)
+      expect(CreateFile.new(file_path).log_data).to include(
+        path: File.expand_path(file_path)
+      )
     end
   end
 

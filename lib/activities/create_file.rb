@@ -2,11 +2,11 @@ require_relative '../activity'
 
 class CreateFile < Activity
   def initialize(path)
-    @path = path
+    @path = File.expand_path(path)
   end
 
   def perform
-    File.open(@path, 'w') {}
+    @file = File.open(@path, 'w') {}
   end
 
   def log_data

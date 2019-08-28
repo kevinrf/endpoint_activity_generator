@@ -2,7 +2,7 @@ require_relative '../activity'
 
 class ModifyFile < Activity
   def initialize(path, append_data: nil)
-    @path = path
+    @path = File.expand_path(path)
     @append_data = append_data
   end
 

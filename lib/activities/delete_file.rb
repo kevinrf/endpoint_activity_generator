@@ -2,7 +2,7 @@ require_relative '../activity'
 
 class DeleteFile < Activity
   def initialize(path)
-    @path = path
+    @path = File.expand_path(path)
   end
 
   def perform
